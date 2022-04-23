@@ -70,3 +70,9 @@ install:	## install 🐸 TTS for development.
 
 docs:	## build the docs
 	$(MAKE) -C docs clean && $(MAKE) -C docs html
+
+deps:	## install 🐸 requirements.
+	pip install -r requirements.txt --upgrade
+
+install-dev:
+	pip install -e .[dev]
