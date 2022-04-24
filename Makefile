@@ -75,4 +75,4 @@ deps-with-upgrade:	## install 🐸 requirements.
 	pip install -r requirements.txt --upgrade
 
 install-dev:
-	pip install -e .[dev]
+	pip install -r requirements.txt -e .[all]
