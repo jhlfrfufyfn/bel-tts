@@ -36,3 +36,5 @@ unidic-lite==1.0.8
 gruut[cs,de,es,fr,it,nl,pt,ru,sv]==2.2.3
 
 bokeh==2.3.0
+tf-estimator-nightly==2.8.0.dev2021122109
+folium==0.2.1
