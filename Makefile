@@ -74,5 +74,8 @@ docs:	## build the docs
 deps-with-upgrade:	## install 🐸 requirements.
 	pip install -r requirements.txt --upgrade
 
+install-req-con:
+	python -m pip install -r requirements.txt -c constraints.txt -e .[dev]
+
 install-dev:
-	python -m pip install -r requirements.txt -c constraints.txt -e .[all]
+	pip install -e .[dev]
