@@ -24,7 +24,7 @@ matplotlib
 tensorboardX
 pyworld
 # coqui stack
-trainer==0.0.5
+trainer>=0.0.5
 coqpit>=0.0.15 # config management
 # chinese g2p deps
 jieba==0.42.1
