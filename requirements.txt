@@ -24,11 +24,11 @@ matplotlib
 tensorboardX
 pyworld
 # coqui stack
-trainer
-coqpit # config management
+trainer==0.0.5
+coqpit>=0.0.15 # config management
 # chinese g2p deps
-jieba
-pypinyin
+jieba==0.42.1
+pypinyin==0.46.0
 # japanese g2p deps
 mecab-python3==1.0.3
 unidic-lite==1.0.8
