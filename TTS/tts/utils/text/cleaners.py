@@ -153,3 +153,4 @@ def belarusian_cleaners(text):
     text = replace_symbols(text, lang="be")
     text = remove_aux_symbols(text)
     text = collapse_whitespace(text)
+    return text
