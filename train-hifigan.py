@@ -24,6 +24,7 @@ config = HifiganConfig(
     print_step=25,
     print_eval=True,
     mixed_precision=False,
+    save_n_checkpoints=2,
     lr_gen=1e-4,
     lr_disc=1e-4,
     data_path="/content/sample_data/be",
