@@ -61,6 +61,16 @@ config = HifiganConfig(
         "max_norm": 4.0,
         "clip_norm": True,
         "stats_path": None
+    },
+    l1_spec_loss_params={
+        "use_mel": True,
+        "sample_rate": 16000,
+        "n_fft": 1024,
+        "hop_length": 256,
+        "win_length": 1024,
+        "n_mels": 80,
+        "mel_fmin": 50.0,
+        "mel_fmax": 8000,
     }
 )
 
