@@ -65,7 +65,7 @@ config = HifiganConfig(
 )
 
 # init audio processor
-ap = AudioProcessor(**config.audio.to_dict())
+ap = AudioProcessor.init_from_config(config)
 
 # load training samples
 eval_samples, train_samples = load_wav_data(config.data_path, config.eval_split_size)
