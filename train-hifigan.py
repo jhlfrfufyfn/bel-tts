@@ -10,10 +10,10 @@ from TTS.vocoder.models.gan import GAN
 output_path = '/content/drive/MyDrive/output'
 
 config = HifiganConfig(
-    batch_size=32,
-    eval_batch_size=16,
-    num_loader_workers=2,
-    num_eval_loader_workers=2,
+    batch_size=64,
+    eval_batch_size=32,
+    num_loader_workers=8,
+    num_eval_loader_workers=8,
     run_eval=True,
     test_delay_epochs=5,
     epochs=1000,
