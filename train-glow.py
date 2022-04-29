@@ -49,8 +49,9 @@ characters=CharactersConfig(
 # INITIALIZE THE TRAINING CONFIGURATION
 # Configure the model. Every config class inherits the BaseTTSConfig.
 config = GlowTTSConfig(
-    batch_size=32,
-    eval_batch_size=16,
+    batch_size=64,
+    eval_batch_size=32,
+    mixed_precision=True,
     num_loader_workers=2,
     num_eval_loader_workers=2,
     run_eval=True,
@@ -95,8 +96,8 @@ config = GlowTTSConfig(
         "power": 1.5,
         "griffin_lim_iters": 60,
         "num_mels": 80,
-        "mel_fmin": None,
-        "mel_fmax": None,
+        "mel_fmin": 50,
+        "mel_fmax": 8000,
         "spec_gain": 20,
         "do_amp_to_db_linear": True,
         "do_amp_to_db_mel": True,
