@@ -52,6 +52,7 @@ config = GlowTTSConfig(
     batch_size=64,
     eval_batch_size=32,
     mixed_precision=True,
+    use_grad_scaler=True,
     num_loader_workers=2,
     num_eval_loader_workers=2,
     run_eval=True,
