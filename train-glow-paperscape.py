@@ -35,7 +35,7 @@ def formatter(root_path, meta_file, **kwargs):  # pylint: disable=unused-argumen
 # Set LJSpeech as our target dataset and define its path.
 # You can also use a simple Dict to define the dataset and pass it to your custom formatter.
 dataset_config = BaseDatasetConfig(
-    name="commonvoice-be", meta_file_train="metadata.csv", path='/content/sample_data/be'
+    name="commonvoice-be", meta_file_train="metadata.csv", path='/storage/be'
 )
 characters=CharactersConfig(
     characters_class="TTS.tts.utils.text.characters.Graphemes",
