@@ -49,8 +49,8 @@ characters=CharactersConfig(
 # INITIALIZE THE TRAINING CONFIGURATION
 # Configure the model. Every config class inherits the BaseTTSConfig.
 config = GlowTTSConfig(
-    batch_size=32,
-    eval_batch_size=16,
+    batch_size=16,
+    eval_batch_size=8,
     mixed_precision=True,
     use_grad_scaler=False,
     num_loader_workers=2,
