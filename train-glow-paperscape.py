@@ -72,7 +72,6 @@ config = GlowTTSConfig(
     save_n_checkpoints=2,
     save_all_best=False,
     save_best_after=5000,
-    data_path="/storage/be",
     test_sentences=[
         "Тэставы сказ.",
         "У рудога вераб’я ў сховішчы пад фатэлем ляжаць нейкія гаючыя зёлкі",
