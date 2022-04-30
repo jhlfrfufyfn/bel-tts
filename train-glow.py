@@ -49,10 +49,10 @@ characters=CharactersConfig(
 # INITIALIZE THE TRAINING CONFIGURATION
 # Configure the model. Every config class inherits the BaseTTSConfig.
 config = GlowTTSConfig(
-    batch_size=64,
-    eval_batch_size=32,
+    batch_size=32,
+    eval_batch_size=16,
     mixed_precision=True,
-    use_grad_scaler=True,
+    use_grad_scaler=False,
     num_loader_workers=2,
     num_eval_loader_workers=2,
     run_eval=True,
@@ -62,7 +62,7 @@ config = GlowTTSConfig(
     use_phonemes=False,
     print_step=15,
     print_eval=True,
-    use_noise_augment=False,
+    use_noise_augment=True,
     output_path=output_path,
     datasets=[dataset_config],
     characters=characters,
