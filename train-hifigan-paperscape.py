@@ -20,6 +20,7 @@ config = HifiganConfig(
     seq_len=8192,
     pad_short=2000,
     use_noise_augment=True,
+    save_step=1000,
     eval_split_size=10,
     print_step=25,
     print_eval=True,
