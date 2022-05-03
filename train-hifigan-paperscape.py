@@ -54,6 +54,7 @@ config = HifiganConfig(
         "pitch_fmax": 640.0,
         "pitch_fmin": 0.0,
         "signal_norm": True,
+        "symmetric_norm": True,
         "stats_path": "scale_stats.npy"
     },
     l1_spec_loss_params={
