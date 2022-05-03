@@ -40,7 +40,7 @@ config = HifiganConfig(
         "log_func": "np.log10",
         "do_trim_silence": True,
         "trim_db": 45,
-        "min_level_db": 0,
+        "min_level_db": -100,
         "do_rms_norm": False,
         "db_level": None,
         "power": 1.5,
