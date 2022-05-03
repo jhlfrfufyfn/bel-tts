@@ -48,6 +48,8 @@ def load_wav_data(data_path, eval_split_size, file_ext="wav"):
     assert len(wav_paths) > 0, f" [!] {data_path} is empty."
     np.random.seed(0)
     np.random.shuffle(wav_paths)
+    print("number of eval split: ", len(wav_paths[:eval_split_size]))
+    print("number of train split: ", len(wav_paths[eval_split_size:]))
     return wav_paths[:eval_split_size], wav_paths[eval_split_size:]
 
 

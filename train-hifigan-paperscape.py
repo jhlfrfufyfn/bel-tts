@@ -53,11 +53,7 @@ config = HifiganConfig(
         "pitch_fmax": 640.0,
         "pitch_fmin": 0.0,
         "signal_norm": True,
-        "min_level_db": -100,
-        "symmetric_norm": True,
-        "max_norm": 4.0,
-        "clip_norm": True,
-        "stats_path": None
+        "stats_path": "scale_stats.npy"
     },
     l1_spec_loss_params={
         "use_mel": True,
@@ -75,6 +71,7 @@ config = HifiganConfig(
 ap = AudioProcessor.init_from_config(config)
 
 # load training samples
+print("config.eval_split_size = ", config.eval_split_size)
 eval_samples, train_samples = load_wav_data(config.data_path, config.eval_split_size)
 
 # init model
