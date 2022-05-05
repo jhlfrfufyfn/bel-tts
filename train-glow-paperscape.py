@@ -51,7 +51,7 @@ characters=CharactersConfig(
 config = GlowTTSConfig(
     batch_size=32,
     eval_batch_size=16,
-    mixed_precision=True,
+    mixed_precision=False,
     use_grad_scaler=False,
     num_loader_workers=8,
     num_eval_loader_workers=8,
@@ -60,15 +60,15 @@ config = GlowTTSConfig(
     epochs=1000,
     text_cleaner="belarusian_cleaners",
     use_phonemes=False,
-    print_step=15,
+    print_step=50,
     print_eval=True,
     use_noise_augment=True,
     output_path=output_path,
     datasets=[dataset_config],
     characters=characters,
-    add_blank=False,
+    add_blank=True,
     enable_eos_bos_chars=True,
-    save_step=500,
+    save_step=10000,
     save_n_checkpoints=2,
     save_all_best=False,
     save_best_after=5000,
@@ -88,7 +88,7 @@ config = GlowTTSConfig(
         "resample": False,
         "preemphasis": 0.0,
         "ref_level_db": 20,
-        "do_sound_norm": True,
+        "do_sound_norm": False,
         "log_func": "np.log10",
         "do_trim_silence": True,
         "trim_db": 45,
@@ -99,7 +99,7 @@ config = GlowTTSConfig(
         "num_mels": 80,
         "mel_fmin": 50,
         "mel_fmax": 8000,
-        "spec_gain": 20,
+        "spec_gain": 1,
         "do_amp_to_db_linear": True,
         "do_amp_to_db_mel": True,
         "pitch_fmax": 640.0,
@@ -109,7 +109,7 @@ config = GlowTTSConfig(
         "symmetric_norm": True,
         "max_norm": 4.0,
         "clip_norm": True,
-        "stats_path": None
+        "stats_path": 'scale_stats.npy'
     }
 )
 # config_characters = BaseCharacters(**config.characters)
