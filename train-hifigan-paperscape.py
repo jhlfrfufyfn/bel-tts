@@ -39,7 +39,7 @@ config = HifiganConfig(
         "resample": False,
         "preemphasis": 0.0,
         "ref_level_db": 20,
-        "do_sound_norm": True,
+        "do_sound_norm": False,
         "log_func": "np.log10",
         "do_trim_silence": True,
         "trim_db": 45,
