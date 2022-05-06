@@ -51,7 +51,7 @@ config = HifiganConfig(
         "num_mels": 80,
         "mel_fmin": 50,
         "mel_fmax": 8000,
-        "spec_gain": 20,
+        "spec_gain": 1,
         "do_amp_to_db_linear": True,
         "do_amp_to_db_mel": True,
         "pitch_fmax": 640.0,
