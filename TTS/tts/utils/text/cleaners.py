@@ -53,6 +53,9 @@ def replace_symbols(text, lang="en"):
         text = text.replace("&", " et ")
     elif lang == "pt":
         text = text.replace("&", " e ")
+    elif lang == "be":
+        text = text.replace('i', 'і');
+        text = text.replace("’", "'");
     return text
 
 
@@ -140,6 +143,14 @@ def multilingual_cleaners(text):
     """Pipeline for multilingual text"""
     text = lowercase(text)
     text = replace_symbols(text, lang=None)
+    text = remove_aux_symbols(text)
+    text = collapse_whitespace(text)
+    return text
+
+def belarusian_cleaners(text):
+    """Pipeline for Belarusian text"""
+    text = lowercase(text)
+    text = replace_symbols(text, lang="be")
     text = remove_aux_symbols(text)
     text = collapse_whitespace(text)
     return text
